@@ -20,6 +20,7 @@ github现在是全球最大开源社区
 
 在进行任何git操作之前，都要先切换到git仓库目录
 git具体命令：
+  本地操作
   git init：初始化git仓库
   git status：查看仓库状态
   git add x：把文件x添加到仓库，文件全称写在add后面。此操作之后并没有真正添加，而是先把操作放在缓存区，git commit才是正式提交
@@ -36,3 +37,18 @@ git具体命令：
   git tag v1.0：在当前代码状态下版本标签v1.0
   git tag：查看版本标签
   git checkout v1.0：切换到v1.0版本
+  
+  远程操作
+  git push origin master：把本地更新代码推到远程master分支
+  git pull origin master：把远程最新的代码更新到本地
+  git clone git@github.com:redsex/x.git：把远程x项目克隆到本地
+  
+  
+三：SSH
+
+在github上提交代码是需要授权的，一般是ssh授权。大多数git服务器都会使用SSH公匙来进行授权，所以要在github上提交代码，就要先添加ssh key配置。
+安装SSH，gitbash自带SSH
+ssh-keygen -t rsa：指定rsa算法生成密匙，接着3个回车键，就会生成两个文件id_rsa和id_rsa.pub
+id_rsa是密匙，id_rsa.pub是公匙。这两个文件，windows默认在当前电脑用户下.ssh文件里
+然后把id_rsa.pub内容复制到github的key里
+
