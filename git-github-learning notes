@@ -5,8 +5,8 @@
 
 git是一款免费，开源的分布式，版本控制系统。
 
-github是基于git的版本控制的托管服务。git是github上用来管理项目的一个工具。
-github现在是全球最大开源社区。
+github是基于git的版本控制的托管服务。git是github上用来管理项目的一个工具
+github现在是全球最大开源社区
 
 学习使用github的作用：
   1：学习优秀的开源项目
@@ -18,3 +18,21 @@ github现在是全球最大开源社区。
 
 二：学习使用git
 
+在进行任何git操作之前，都要先切换到git仓库目录
+git具体命令：
+  git init：初始化git仓库
+  git status：查看仓库状态
+  git add x：把文件x添加到仓库，文件全称写在add后面。此操作之后并没有真正添加，而是先把操作放在缓存区，git commit才是正式提交
+  git rm --cached：移除缓存
+  git commit -m 'x'：进行提交，x代表附带信息写在单引号里，-m代表提交信息
+  git log：查看所有产生的提交(commit)记录
+  git branch：查看当前分支
+  git branch x：创建一个名为x的分支
+  git checkout x：切换到分支x上
+  git checkout -b x：新建一个名为x的分支，并切换到分支x上
+  git merge x：把x分支合并到主分支，前提是你已经在主分支目录
+  git branch -d x：删除分支x，x分支已经合并完成之后，需要删除
+  git branch -D x：强制删除x分支，用在分支x合并失败导致删除失败的情况下，强制删除
+  git tag v1.0：在当前代码状态下版本标签v1.0
+  git tag：查看版本标签
+  git checkout v1.0：切换到v1.0版本
